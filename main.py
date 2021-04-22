@@ -64,7 +64,7 @@ if __name__ == '__main__':
     WebDriverWait(driver, 20).until(ec.url_matches(expected_grammarly_url))
     # again, if not a single script, we could add hooks here for Robot Framework, Cucumber, etc.
     # for now a simple assertion will work
-    assert(ec.url_matches(expected_grammarly_url), "FAIL : Grammarly Extension not working as intended")
+    assert ec.url_matches(expected_grammarly_url), "FAIL : Grammarly Extension not working as intended"
 
     # how do we verify that the plugin ISN'T working?
     """
